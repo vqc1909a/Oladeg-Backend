@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/biblioteca-digitals",
+      "handler": "biblioteca-digital.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/biblioteca-digitals/count",
+      "handler": "biblioteca-digital.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/biblioteca-digitals/:id",
+      "handler": "biblioteca-digital.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/biblioteca-digitals",
+      "handler": "biblioteca-digital.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/biblioteca-digitals/:id",
+      "handler": "biblioteca-digital.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/biblioteca-digitals/:id",
+      "handler": "biblioteca-digital.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solicitantes",
+  "info": {
+    "name": "solicitantes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombres": {
+      "type": "string",
+      "required": false
+    },
+    "correo": {
+      "type": "email",
+      "required": false
+    },
+    "celular": {
+      "required": false,
+      "type": "biginteger",
+      "max": "999999999"
+    },
+    "curso": {
+      "type": "string"
+    },
+    "mensaje": {
+      "type": "text"
+    },
+    "Atendido": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

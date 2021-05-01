@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "biblioteca_digitals",
+  "info": {
+    "name": "BibliotecaDigital",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Contenido": {
+      "type": "richtext",
+      "required": true
+    },
+    "Libro": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Url": {
+      "type": "uid",
+      "targetField": "Titulo",
+      "required": true
+    }
+  }
+}

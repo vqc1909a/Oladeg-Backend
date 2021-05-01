@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cursos-diplomado-especializaciones",
+      "handler": "cursos-diplomado-especializaciones.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cursos-diplomado-especializaciones/count",
+      "handler": "cursos-diplomado-especializaciones.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cursos-diplomado-especializaciones/:id",
+      "handler": "cursos-diplomado-especializaciones.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cursos-diplomado-especializaciones",
+      "handler": "cursos-diplomado-especializaciones.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cursos-diplomado-especializaciones/:id",
+      "handler": "cursos-diplomado-especializaciones.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cursos-diplomado-especializaciones/:id",
+      "handler": "cursos-diplomado-especializaciones.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

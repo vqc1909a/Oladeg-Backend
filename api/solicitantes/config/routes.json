@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/solicitantes",
+      "handler": "solicitantes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/solicitantes/count",
+      "handler": "solicitantes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/solicitantes/:id",
+      "handler": "solicitantes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/solicitantes",
+      "handler": "solicitantes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/solicitantes/:id",
+      "handler": "solicitantes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/solicitantes/:id",
+      "handler": "solicitantes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

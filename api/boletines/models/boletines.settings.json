@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boletines",
+  "info": {
+    "name": "Boletines",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Contenido": {
+      "type": "richtext",
+      "required": true
+    },
+    "Boletin": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Url": {
+      "type": "uid",
+      "targetField": "Titulo",
+      "required": true
+    }
+  }
+}

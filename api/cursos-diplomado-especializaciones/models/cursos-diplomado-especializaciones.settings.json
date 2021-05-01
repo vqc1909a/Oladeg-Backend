@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos_diplomado_especializaciones",
+  "info": {
+    "name": "CursosDiplomadoEspecializaciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "Inversion": {
+      "type": "string",
+      "required": true,
+      "default": "S/. 150.00"
+    },
+    "Duracion": {
+      "type": "string",
+      "default": "07 Módulos - 07 Semanas",
+      "required": true
+    },
+    "FechaDeInicio": {
+      "type": "datetime",
+      "required": true
+    },
+    "Modalidad": {
+      "type": "string",
+      "default": "Virtual",
+      "required": true
+    },
+    "Url": {
+      "type": "uid",
+      "targetField": "Titulo",
+      "required": true
+    },
+    "Inscripcion": {
+      "type": "richtext"
+    },
+    "Temario": {
+      "type": "richtext"
+    },
+    "Materiales": {
+      "type": "richtext"
+    },
+    "Promocion": {
+      "type": "richtext"
+    },
+    "Metodologia": {
+      "type": "richtext"
+    },
+    "NombreExpositor": {
+      "type": "string"
+    },
+    "DescripcionExpositor": {
+      "type": "text"
+    },
+    "ImagenExpositor": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "TipoDeContenido": {
+      "type": "enumeration",
+      "enum": [
+        "CURSO",
+        "DIPLOMADO",
+        "ESPECIALIZACION"
+      ],
+      "required": true
+    },
+    "Portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Certificado": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

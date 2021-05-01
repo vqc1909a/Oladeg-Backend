@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publicidads",
+  "info": {
+    "name": "Publicidad"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Direccion": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
